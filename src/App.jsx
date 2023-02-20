@@ -1,6 +1,7 @@
 import React from "react";
 
-import Navbar from './scenes/Navbar'
+import Navbar from './scenes/Navbar';
+import DotGroup from './scenes/DotGroup';
 import { useMediaQuery } from './hooks/useMediaQuery';
 
 const App = () => {
@@ -24,7 +25,17 @@ const App = () => {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <div className="w-5/6 mx-auto md:h-full"></div>
+      <div className="w-5/6 mx-auto md:h-full">
+        {isAboveMediumScreens && (
+          <div>
+            <DotGroup 
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+          </div>
+        )}
+        <Landing selectedPage={selectedPage} />
+      </div>
     </div>
   );
 };
