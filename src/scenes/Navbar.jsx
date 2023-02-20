@@ -3,7 +3,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import useMediaQuery from '../hooks/useMediaQuery';
 
-const menu = [
+export const menu = [
   {id: 1, page: "Home"},
   {id: 2, page: "Skills"},
   {id: 3, page: "Projects"},
