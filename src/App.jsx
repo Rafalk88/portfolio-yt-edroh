@@ -2,6 +2,7 @@ import React from "react";
 
 import Navbar from './scenes/Navbar';
 import DotGroup from './scenes/DotGroup';
+import Landing from './scenes/Landing'
 import { useMediaQuery } from './hooks/useMediaQuery';
 
 const App = () => {
