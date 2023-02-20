@@ -3,6 +3,14 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import useMediaQuery from '../hooks/useMediaQuery';
 
+const menu = [
+  {id: 1, page: "Home"},
+  {id: 2, page: "Skills"},
+  {id: 3, page: "Projects"},
+  {id: 4, page: "Testimonials"},
+  {id: 5, page: "Contact"},
+]
+
 const Link = ({page, selectedPage, setSelectedPage}) => {
   const lowerCasePage = page.toLowerCase();
 
@@ -29,11 +37,18 @@ const Navbar = ({selectedPage, setSelectedPage}) => {
 
         {isAboveSmallScreens ? (
           <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
-            <Link
-              page="Home"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
+            {
+              menu.map((item) => {
+                return (
+                  <Link
+                    key={item.id}
+                    page={item.page}
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+                )
+              })
+            }
           </div>
         ) : (
           <div></div>
