@@ -52,8 +52,27 @@ export const MySkills = () => {
         </aside>
       </article>
 
-      <section className="">
-
+      <section className="md: flex md: justify-between mt-16 gap-32">
+        <article>
+          <motion.div
+          className="md:w-1/3 mt-10"
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+        >
+          <article className="relative h-32">
+            <div className="z-10">
+              <p className="font-playfair font-semibold text-5xl">01</p>
+              <p className="font-playfair font-semibold text-3xl mt-3">Experience</p>
+            </div>
+            <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
+          </article>
+          <p className="mt-5">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt sed similique id perferendis aspernatur. Ex distinctio mollitia eligendi nam.
+          </p>
+        </motion.div>
+        </article>
       </section>
     </section>
   )
