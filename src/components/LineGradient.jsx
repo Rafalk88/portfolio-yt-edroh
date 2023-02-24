@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const LineGradient = () => {
+export const LineGradient = ({ width = "w-full" }) => {
   return (
-    <div>LineGradient component</div>
+    <div className={`h-0.5 ${width} bg-gradient-rainblue`} />
   )
 }
 
