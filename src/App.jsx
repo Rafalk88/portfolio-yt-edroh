@@ -2,8 +2,10 @@ import React from "react";
 
 import Navbar from './scenes/Navbar';
 import DotGroup from './scenes/DotGroup';
-import Landing from './scenes/Landing'
-import LineGradient from './components/LineGradient'
+import Landing from './scenes/Landing';
+import LineGradient from './components/LineGradient';
+import MySkills from './scenes/MySkills';
+
 import { useMediaQuery } from './hooks/useMediaQuery';
 
 const App = () => {
@@ -39,6 +41,11 @@ const App = () => {
         <Landing selectedPage={selectedPage} />
       </div>
       <LineGradient />
+      <div
+        className="w-5/6 mx-auto md:h-full"
+      >
+        <MySkills />
+      </div>
     </div>
   );
 };
