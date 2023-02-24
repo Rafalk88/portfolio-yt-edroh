@@ -651,6 +651,18 @@ video {
   margin-top: 1.25rem;
 }
 
+.mr-10{
+  margin-right: 2.5rem;
+}
+
+.mr-8{
+  margin-right: 2rem;
+}
+
+.mr-12{
+  margin-right: 3rem;
+}
+
 .flex{
   display: flex;
 }
@@ -1084,6 +1096,10 @@ body,
 
   .md\:max-w-\[500px\]{
     max-width: 500px;
+  }
+
+  .md\:max-w-\[540px\]{
+    max-width: 540px;
   }
 
   .md\:items-center{
