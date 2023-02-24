@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 
+import Project from './Project';
+
 import LineGradient from '../components/LineGradient';
 
 const container = {
@@ -52,8 +54,23 @@ export const Projects = () => {
             variants={container}
           >
             <div className="flex justify-center text-center items-center p-10 bg-red
-              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
+              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+            >
               BEAUTIFUL USER INTERFACES
+            </div>
+            <Project title="Project 1" projectVariant={projectVariant} />
+            <Project title="Project 2" projectVariant={projectVariant} />
+
+            <Project title="Project 3" projectVariant={projectVariant} />
+            <Project title="Project 4" projectVariant={projectVariant} />
+            <Project title="Project 5" projectVariant={projectVariant} />
+
+            <Project title="Project 6" projectVariant={projectVariant} />
+            <Project title="Project 7" projectVariant={projectVariant} />
+            <div className="flex justify-center text-center items-center p-10 bg-blue
+              max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+            >
+              SMOOTH USER INTERFACES
             </div>
           </motion.div>
         </div>
