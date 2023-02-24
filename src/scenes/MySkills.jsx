@@ -58,7 +58,7 @@ export const MySkills = () => {
         </aside>
       </article>
 
-      <section className="md: flex md: justify-between mt-16 gap-32">
+      <section className="md:flex md:justify-between mt-16 gap-32">
         {
           skills.map((skill) => {
             return (
