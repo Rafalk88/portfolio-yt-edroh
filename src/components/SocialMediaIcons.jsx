@@ -1,10 +1,10 @@
 import React from 'react';
 
 const icons = [
-  {name: 'linkedin', link: 'https://linkedin.com'},
-  {name: 'twitter', link: 'https://twitter.com'},
-  {name: 'facebook', link: 'https://facebook.com'},
-  {name: 'instagram', link: 'https://instagram.com'}
+  {id: 1, name: 'linkedin', link: 'https://linkedin.com'},
+  {id: 2, name: 'twitter', link: 'https://twitter.com'},
+  {id: 3, name: 'facebook', link: 'https://facebook.com'},
+  {id: 4, name: 'instagram', link: 'https://instagram.com'}
 ]
 
 export const SocialMediaIcons = () => {
@@ -13,7 +13,8 @@ export const SocialMediaIcons = () => {
       {
         icons.map((icon) => {
           return (
-            <a 
+            <a
+              key={icon.id}
               href={icon.link}
               className="hover:opacity-50 transition duration-500"
               target="_blank"
