@@ -3,8 +3,9 @@ import React from "react";
 import Navbar from './scenes/Navbar';
 import DotGroup from './scenes/DotGroup';
 import Landing from './scenes/Landing';
-import LineGradient from './components/LineGradient';
 import MySkills from './scenes/MySkills';
+import Projects from './scenes/Projects'
+import LineGradient from './components/LineGradient';
 
 import { useMediaQuery } from './hooks/useMediaQuery';
 
@@ -45,6 +46,7 @@ const App = () => {
         className="w-5/6 mx-auto md:h-full"
       >
         <MySkills />
+        <Projects />
       </div>
     </div>
   );
