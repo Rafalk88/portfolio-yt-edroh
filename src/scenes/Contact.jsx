@@ -17,6 +17,7 @@ export const Contact = () => {
   return (
     <section id="contact" className="py-48">
       <motion.div
+      className="flex justify-end w-full"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -29,7 +30,7 @@ export const Contact = () => {
               <span className="text-yellow">CONTACT ME</span> TO GET STARTED
             </p>
             <div className="flex md:justify-end my-5">
-              <LineGradient width="mx-auto w-2/4" />
+              <LineGradient width="w-1/2" />
             </div>
           </div>
         </motion.div>
@@ -52,7 +53,7 @@ export const Contact = () => {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <form target="_blank" onSubmit={onSubmit} action="" method="POST">
+            <form target="_blank" onSubmit={onSubmit} action="https://formsubmit.co/e009c4dd8930aeadda3d47b51819cda0" method="POST">
               <input
                 className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
                 type="text"

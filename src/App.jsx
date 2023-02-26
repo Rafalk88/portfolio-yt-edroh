@@ -23,7 +23,7 @@ const App = () => {
     window.addEventListener("scroll", handleScroll)
 
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  }, []);
 
   return (
     <div className="app bg-deep-blue">
@@ -52,7 +52,7 @@ const App = () => {
         <Projects />
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto">
         <Testimonials />
       </div>
       <LineGradient />
