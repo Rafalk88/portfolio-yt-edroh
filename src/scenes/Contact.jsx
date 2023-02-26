@@ -17,7 +17,7 @@ export const Contact = () => {
   return (
     <section id="contact" className="py-48">
       <motion.div
-      className="flex justify-end w-full"
+          className="flex justify-end w-full"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.5 }}
