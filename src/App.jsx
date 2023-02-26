@@ -19,11 +19,17 @@ const App = () => {
 
   React.useEffect(() => {
     const handleScroll = () => {
-      window.scrollY === 0 ? setIsTopOfPage(true) : setIsTopOfPage(false)
-    }
-    window.addEventListener("scroll", handleScroll)
+      window.scrollY === 0 ? setIsTopOfPage(true): setIsTopOfPage(false);
 
-    return () => window.removeEventListener("scroll", handleScroll)
+      if (window.scrollY >=0) setSelectedPage("home");
+      if (window.scrollY >= 547) setSelectedPage("skills");
+      if (window.scrollY >= 1370) setSelectedPage("projects");
+      if (window.scrollY >= 2870) setSelectedPage("testimonials");
+      if (window.scrollY >= 3870) setSelectedPage("contact");
+    }
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
