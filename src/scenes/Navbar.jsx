@@ -50,7 +50,14 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <h4 className="font-playfair text-3xl font-bold"><a href="#home">JE</a></h4>
+        <h4 className="font-playfair text-3xl font-bold">
+          <AnchorLink
+            href="#home"
+            onClick={() => setSelectedPage("#home")}
+          >
+            JE
+          </AnchorLink>
+        </h4>
 
         {isAboveSmallScreens ? (
           <div className="flex justify-between gap-16 font-opensans text-sm font-semibold">
