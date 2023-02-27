@@ -1,9 +1,9 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-import { menu } from './Navbar'
+import { menu } from './Navbar';
 
-const dotMenu = menu
+const dotMenu = menu;
 const selectedStyles = `relative bg-yellow before:absolute before:w-6 before:h-6
     before:rounded-full before:border-2 before:border-yellow before:left-[-50%]
     before:top-[-50%]`;
@@ -11,7 +11,7 @@ const selectedStyles = `relative bg-yellow before:absolute before:w-6 before:h-6
 const DotGroup = ({selectedPage, setSelectedPage}) => {
   
   return (
-    <div className="flex flex-col gap-6 fixed top-[60%] right-7">
+    <aside className="flex flex-col gap-6 fixed top-[60%] right-7">
       {
         dotMenu.map((item) => {
           const lowerCasePage = item.page.toLowerCase();
@@ -26,8 +26,13 @@ const DotGroup = ({selectedPage, setSelectedPage}) => {
           )
         })
       }
-    </div>
+    </aside>
   )
-}
+};
+
+DotGroup.propTypes = {
+  selectedPage: PropTypes.string.isRequired,
+  setSelectedPage: PropTypes.func.isRequired,
+};
 
 export default DotGroup;
