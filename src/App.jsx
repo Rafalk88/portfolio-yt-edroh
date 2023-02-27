@@ -52,7 +52,7 @@ const App = () => {
             />
           </div>
         )}
-        <Landing selectedPage={selectedPage} />
+        <Landing selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       </div>
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-full">
