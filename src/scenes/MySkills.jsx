@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 import LineGradient from '../components/LineGradient';
@@ -36,18 +35,18 @@ export const MySkills = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, numquam maxime cum quibusdam pariatur nobis
           </p>
         </motion.div>
-        <aside className="mt-16 md:mt-0">
+        <figure className="mt-16 md:mt-0">
           {isAboveMediumScreens ? (
             <div
             className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
               before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]"
-          >
-            <img 
-              src="../assets/skills-image.png"
-              alt="skills"
-              className="z-10"
-            />
-          </div>
+            >
+              <img
+                src="../assets/skills-image.png"
+                alt="skills"
+                className="z-10"
+              />
+            </div>
           ) : (
             <img 
               src="../assets/skills-image.png"
@@ -55,10 +54,10 @@ export const MySkills = () => {
               className="z-10"
             />
           )}
-        </aside>
+        </figure>
       </article>
 
-      <section className="md:flex md:justify-between mt-16 gap-32">
+      <article className="md:flex md:justify-between mt-16 gap-32">
         {
           skills.map((skill) => {
             return (
@@ -84,7 +83,7 @@ export const MySkills = () => {
             )
           })
         }
-      </section>
+      </article>
     </section>
   )
 };
