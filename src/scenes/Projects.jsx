@@ -61,21 +61,21 @@ export const Projects = () => {
               BEAUTIFUL USER INTERFACES
             </header>
             <Project title="Project 1" projectVariant={projectVariant} content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minima temporibus nesciunt illo voluptatum 
-              pariatur ex asperiores vel deserunt voluptates" />
+              pariatur ex asperiores vel deserunt voluptates" gitHubLink={"https://www.github.com"} demo={true} demoLink={""} />
             <Project title="Project 2" projectVariant={projectVariant} content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minima temporibus nesciunt illo voluptatum 
-              pariatur ex asperiores vel deserunt voluptates" />
+              pariatur ex asperiores vel deserunt voluptates" gitHubLink={"https://www.github.com"} />
 
             <Project title="Project 3" projectVariant={projectVariant} content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minima temporibus nesciunt illo voluptatum 
-              pariatur ex asperiores vel deserunt voluptates" />
+              pariatur ex asperiores vel deserunt voluptates" gitHubLink={"https://www.github.com"} />
             <Project title="Project 4" projectVariant={projectVariant} content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minima temporibus nesciunt illo voluptatum 
-              pariatur ex asperiores vel deserunt voluptates" />
+              pariatur ex asperiores vel deserunt voluptates" gitHubLink={"https://www.github.com"} demo={true} demoLink={""} />
             <Project title="Project 5" projectVariant={projectVariant} content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minima temporibus nesciunt illo voluptatum 
-              pariatur ex asperiores vel deserunt voluptates" />
+              pariatur ex asperiores vel deserunt voluptates" gitHubLink={"https://www.github.com"} demo={true} demoLink={""} />
 
             <Project title="Project 6" projectVariant={projectVariant} content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minima temporibus nesciunt illo voluptatum 
-              pariatur ex asperiores vel deserunt voluptates" />
+              pariatur ex asperiores vel deserunt voluptates" gitHubLink={"https://www.github.com"} />
             <Project title="Project 7" projectVariant={projectVariant} content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minima temporibus nesciunt illo voluptatum 
-              pariatur ex asperiores vel deserunt voluptates" />
+              pariatur ex asperiores vel deserunt voluptates" gitHubLink={"https://www.github.com"} demo={true} demoLink={""} />
             <footer className="flex justify-center text-center items-center p-10 bg-blue
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
             >
