@@ -17,6 +17,37 @@ const App = () => {
   const [isTopOfPage, setIsTopOfPage] = React.useState(true);
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
+  const verySmallScreen = useMediaQuery('(max-width: 767px');
+  const smallScreen = useMediaQuery('(max-width: 1059px)');
+  const mediumScreen = isAboveMediumScreens;
+  
+  const getScrollY = React.useCallback((section) => {
+      let scrollY
+
+      if (verySmallScreen) {
+        if (section === "home") scrollY = 997
+        if (section === "skills") scrollY = 2572
+        if (section === "projects") scrollY = 5383
+        if (section === "testimonials") scrollY = 7401
+      }
+
+      if (smallScreen) {
+        if (section === "home") scrollY = 915
+        if (section === "skills") scrollY = 2364
+        if (section === "projects") scrollY = 3580
+        if (section === "testimonials") scrollY = 5550
+      }
+
+      if (mediumScreen) {
+        if (section === "home") scrollY = 823
+        if (section === "skills") scrollY = 1646
+        if (section === "projects") scrollY = 3173
+        if (section === "testimonials") scrollY = 4083
+      }
+
+      return scrollY
+  }, [mediumScreen, smallScreen, verySmallScreen])
+
   React.useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY === 0) {
@@ -24,17 +55,17 @@ const App = () => {
       } else {
         setIsTopOfPage(false);
 
-        if (window.scrollY  >= 0 && window.scrollY  < 823 ) setSelectedPage("home");
-        if (window.scrollY  >= 823 && window.scrollY  < 1646 ) setSelectedPage("skills");
-        if (window.scrollY  >= 1646 && window.scrollY  < 3173 ) setSelectedPage("projects");
-        if (window.scrollY  >= 3173 && window.scrollY  < 4083 ) setSelectedPage("testimonials");
-        if (window.scrollY  >= 4083) setSelectedPage("contact");
+        if (window.scrollY  >= 0 && window.scrollY  < getScrollY('home') ) setSelectedPage("home");
+        if (window.scrollY  >= getScrollY('home') && window.scrollY  < getScrollY('skills') ) setSelectedPage("skills");
+        if (window.scrollY  >= getScrollY('skills') && window.scrollY  < getScrollY('projects') ) setSelectedPage("projects");
+        if (window.scrollY  >= getScrollY('projects') && window.scrollY  < getScrollY('testimonials') ) setSelectedPage("testimonials");
+        if (window.scrollY  >= getScrollY('testimonials')) setSelectedPage("contact");
       }
     }
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [getScrollY]);
 
   return (
     <div className="app bg-deep-blue">

@@ -28,6 +28,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
             page={item.page}
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
+            screen={'big'}
           />
           : 
           <Link
@@ -37,6 +38,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
             setSelectedPage={setSelectedPage}
             isMenuToggled={isMenuToggled}
             setIsMenuToggled={setIsMenuToggled}
+            screen={'small'}
           />
         )
       })
