@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import LineGradient from '../components/LineGradient';
 
 export const Contact = () => {
-  const { register, trigger, formState: {errors} } = useForm();
+  const { register, trigger, formState: {errors}, reset } = useForm();
 
   const onSubmit = async (e) => {
     const isValid = await trigger();
@@ -12,6 +12,8 @@ export const Contact = () => {
     if (!isValid) {
       e.preventDefault()
     }
+    
+    reset()
   }
 
   return (
