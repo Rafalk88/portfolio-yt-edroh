@@ -4,7 +4,7 @@ export const ProjectInfo = ({ img='', gitHub, gitHubLink, demo, demoLink }) => {
   return (
     <article className="fixed top-0 left-0 bg-grey/50 h-full w-full 
       z-40 cursor-pointer flex justify-center items-center">
-      <div className="p-4 bg-white">
+      <div className="p-4 bg-white mx-2 sm:mx-0">
         <figure>
           <img
             src={`../assets/${img}.jpeg`}
