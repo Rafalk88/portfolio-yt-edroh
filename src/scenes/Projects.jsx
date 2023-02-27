@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 
 import Project from './Project';
-
 import LineGradient from '../components/LineGradient';
 
 const container = {
@@ -29,7 +28,7 @@ export const Projects = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
         >
-          <div>
+          <header>
             <p
               className="font-playfair font-semibold text-4xl"
             >
@@ -38,13 +37,13 @@ export const Projects = () => {
             <div className="flex justify-center mt-5">
               <LineGradient width="w-1/3" />
             </div>
-          </div>
+          </header>
           <p className="mt-10 mb-10">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, numquam maxime cum quibusdam pariatur nobis
           </p>
         </motion.div>
 
-        <div className="flex justify-center">
+        <article className="flex justify-center">
           <motion.div
             className="sm:grid sm:grid-cols-3"
             initial="hidden"
@@ -53,27 +52,34 @@ export const Projects = () => {
             transition={{ duration: 0.5 }}
             variants={container}
           >
-            <div className="flex justify-center text-center items-center p-10 bg-red
+            <header className="flex justify-center text-center items-center p-10 bg-red
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
             >
               BEAUTIFUL USER INTERFACES
-            </div>
-            <Project title="Project 1" projectVariant={projectVariant} />
-            <Project title="Project 2" projectVariant={projectVariant} />
+            </header>
+            <Project title="Project 1" projectVariant={projectVariant} content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minima temporibus nesciunt illo voluptatum 
+              pariatur ex asperiores vel deserunt voluptates" />
+            <Project title="Project 2" projectVariant={projectVariant} content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minima temporibus nesciunt illo voluptatum 
+              pariatur ex asperiores vel deserunt voluptates" />
 
-            <Project title="Project 3" projectVariant={projectVariant} />
-            <Project title="Project 4" projectVariant={projectVariant} />
-            <Project title="Project 5" projectVariant={projectVariant} />
+            <Project title="Project 3" projectVariant={projectVariant} content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minima temporibus nesciunt illo voluptatum 
+              pariatur ex asperiores vel deserunt voluptates" />
+            <Project title="Project 4" projectVariant={projectVariant} content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minima temporibus nesciunt illo voluptatum 
+              pariatur ex asperiores vel deserunt voluptates" />
+            <Project title="Project 5" projectVariant={projectVariant} content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minima temporibus nesciunt illo voluptatum 
+              pariatur ex asperiores vel deserunt voluptates" />
 
-            <Project title="Project 6" projectVariant={projectVariant} />
-            <Project title="Project 7" projectVariant={projectVariant} />
-            <div className="flex justify-center text-center items-center p-10 bg-blue
+            <Project title="Project 6" projectVariant={projectVariant} content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minima temporibus nesciunt illo voluptatum 
+              pariatur ex asperiores vel deserunt voluptates" />
+            <Project title="Project 7" projectVariant={projectVariant} content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint minima temporibus nesciunt illo voluptatum 
+              pariatur ex asperiores vel deserunt voluptates" />
+            <footer className="flex justify-center text-center items-center p-10 bg-blue
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
             >
               SMOOTH USER INTERFACES
-            </div>
+            </footer>
           </motion.div>
-        </div>
+        </article>
     </section>
   )
 };
