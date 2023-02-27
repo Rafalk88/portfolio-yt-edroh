@@ -2,6 +2,14 @@ import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 
 import LineGradient from '../components/LineGradient';
+import { 
+  CONTACT_ACTION,
+  REQ_MESSAGE,
+  NAME_LENGTH_MESSAGE,
+  EMAIL_PATTERN_MESSAGE,
+  EMAIL_VALIDATION_PATTERN,
+  MESSAGE_LENGTH_MESSAGE
+} from '../constats'
 
 export const Contact = () => {
   const { register, trigger, formState: {errors}, reset } = useForm();
@@ -25,7 +33,7 @@ export const Contact = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
         >
-          <div>
+          <article>
             <p
               className="font-playfair font-semibold text-4xl"
             >
@@ -34,10 +42,10 @@ export const Contact = () => {
             <div className="flex md:justify-end my-5">
               <LineGradient width="w-1/2" />
             </div>
-          </div>
+          </article>
         </motion.div>
 
-        <div className="md:flex md:justify-between gap-16 mt-5">
+        <section className="md:flex md:justify-between gap-16 mt-5">
           <motion.div
             className="basis-1/2 flex justify-center"
             initial={{ opacity: 0, y: -50 }}
@@ -45,7 +53,9 @@ export const Contact = () => {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5 }}
           >
-            <img src="../assets/contact-image.jpeg" alt="contact" />
+            <figure>
+              <img src="../assets/contact-image.jpeg" alt="contact" />
+            </figure>
           </motion.div>
 
           <motion.div
@@ -55,7 +65,7 @@ export const Contact = () => {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <form target="_blank" onSubmit={onSubmit} action="https://formsubmit.co/e009c4dd8930aeadda3d47b51819cda0" method="POST">
+            <form target="_blank" onSubmit={onSubmit} action={CONTACT_ACTION} method="POST">
               <input
                 className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
                 type="text"
@@ -68,8 +78,8 @@ export const Contact = () => {
               {
                 errors.name && (
                   <p className="text-red mt-1">
-                    {errors.name.type === 'required' && "This field is required."}
-                    {errors.name.type === 'maxLength' && "Max length is 100 chars."}
+                    {errors.name.type === 'required' && REQ_MESSAGE}
+                    {errors.name.type === 'maxLength' && NAME_LENGTH_MESSAGE}
                   </p>
                 )
               }
@@ -80,14 +90,14 @@ export const Contact = () => {
                 placeholder="EMAIL"
                 {...register("email", {
                   required: true,
-                  pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  pattern: EMAIL_VALIDATION_PATTERN,
                 })}
               />
               {
                 errors.email && (
                   <p className="text-red mt-1">
-                    {errors.email.type === 'required' && "This field is required."}
-                    {errors.email.type === 'pattern' && "Invalid email address."}
+                    {errors.email.type === 'required' && REQ_MESSAGE}
+                    {errors.email.type === 'pattern' && EMAIL_PATTERN_MESSAGE}
                   </p>
                 )
               }
@@ -106,8 +116,8 @@ export const Contact = () => {
               {
                 errors.message && (
                   <p className="text-red mt-1">
-                    {errors.message.type === 'required' && "This field is required."}
-                    {errors.message.type === 'maxLength' && "Max length is 2000 chars."}
+                    {errors.message.type === 'required' && REQ_MESSAGE}
+                    {errors.message.type === 'maxLength' && MESSAGE_LENGTH_MESSAGE}
                   </p>
                 )
               }
@@ -121,7 +131,7 @@ export const Contact = () => {
               </button>
             </form>
           </motion.div>
-        </div>
+        </section>
     </section>
   )
 };
