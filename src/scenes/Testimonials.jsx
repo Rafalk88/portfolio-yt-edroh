@@ -33,7 +33,7 @@ export const Testimonials = () => {
           </p>
         </motion.div>
 
-        <div className="md:flex md:justify-between gap-8">
+        <article className="md:flex md:justify-between gap-8">
           {
             testimonials.map(testimonial => {
               return (
@@ -53,7 +53,7 @@ export const Testimonials = () => {
               )
             })
           }
-        </div>
+        </article>
     </section>
   )
 };
