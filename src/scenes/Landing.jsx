@@ -17,7 +17,7 @@ export const Landing = ({setSelectedPage}) => {
 
   return (
     <section id="home" className="md:flex md:justify-between md:items-center md:h-full gap-16 py-10">
-      <div className="md:order-2 flec justify-center basis-2/5 z-10 mt-16 md:mt-32">
+      <figure className="md:order-2 flec justify-center basis-2/5 z-10 mt-16 md:mt-32">
         {isAboveMediumScreens ? (
           <div
             className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20
@@ -39,8 +39,8 @@ export const Landing = ({setSelectedPage}) => {
               max-w-[300px] md:max-w-[400px]"
             />
         )}
-      </div>
-      <div className="z-30 basis-2/5 mt-12 md:mt-32">
+      </figure>
+      <article className="z-30 basis-2/5 mt-12 md:mt-32">
         <motion.div
           initial={{opacity: 0, x: -50}}
           whileInView={{opacity: 1, x: 0}}
@@ -101,7 +101,7 @@ export const Landing = ({setSelectedPage}) => {
         >
           <SocialMediaIcons icons={icons} />
         </motion.div>
-      </div>
+      </article>
     </section>
   );
 };
