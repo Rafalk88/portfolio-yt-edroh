@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 
 import LineGradient from '../components/LineGradient';
 
-const testimonialsStyles = `mx-auto relative max-w-[400px] h-[350px] 
-  flex flex-col justify-end p-16 mt-48 before:absolute before:top-[-120px] 
+const testimonialsStyles = `mx-auto relative md:basis-1/3 max-w-[400px] h-[350px] flex 
+  flex-col justify-end p-16 mt-48 before:absolute before:top-[-120px] 
   before:-ml-[110px] before:left-1/2`;
 
 const testimonials = [
