@@ -33,7 +33,7 @@ export const Contact = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
         >
-          <article>
+          <header>
             <p
               className="font-playfair font-semibold text-4xl"
             >
@@ -42,7 +42,7 @@ export const Contact = () => {
             <div className="flex md:justify-end my-5">
               <LineGradient width="w-1/2" />
             </div>
-          </article>
+          </header>
         </motion.div>
 
         <section className="md:flex md:justify-between gap-16 mt-5">
