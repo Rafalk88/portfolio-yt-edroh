@@ -1,9 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { motion } from 'framer-motion';
 
 import SocialMediaIcons from '../components/SocialMediaIcons';
 import { useMediaQuery } from '../hooks/useMediaQuery';
+
+export const icons = [
+  {id: 1, name: 'linkedin', link: 'https://linkedin.com'},
+  {id: 2, name: 'twitter', link: 'https://twitter.com'},
+  {id: 3, name: 'facebook', link: 'https://facebook.com'},
+  {id: 4, name: 'instagram', link: 'https://instagram.com'},
+]
 
 export const Landing = ({setSelectedPage}) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
@@ -92,11 +99,15 @@ export const Landing = ({setSelectedPage}) => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <SocialMediaIcons />
+          <SocialMediaIcons icons={icons} />
         </motion.div>
       </div>
     </section>
   );
+};
+
+Landing.propTypes = {
+  setSelectedPage: PropTypes.func.isRequired,
 };
 
 export default Landing;
