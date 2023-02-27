@@ -23,10 +23,14 @@ export const Projects = () => {
     >
       <motion.div
           className="md:w-2/4 mx-auto text-center"
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: -50 },
+            visible: { opacity: 1, y: 0 },
+          }}
         >
           <header>
             <p
@@ -46,11 +50,10 @@ export const Projects = () => {
         <article className="flex justify-center">
           <motion.div
             className="sm:grid sm:grid-cols-3"
+            variants={container}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
-            variants={container}
+            viewport={{ once: true, amount: 0.2 }}
           >
             <header className="flex justify-center text-center items-center p-10 bg-red
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"

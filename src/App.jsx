@@ -18,7 +18,7 @@ const App = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   const verySmallScreen = useMediaQuery('(max-width: 767px');
-  const smallScreen = useMediaQuery('(max-width: 1059px)');
+  const smallScreen = useMediaQuery('(min-width: 768px)');
   const mediumScreen = isAboveMediumScreens;
   
   const getScrollY = React.useCallback((section) => {
@@ -26,9 +26,9 @@ const App = () => {
 
       if (verySmallScreen) {
         if (section === "home") scrollY = 997
-        if (section === "skills") scrollY = 2572
-        if (section === "projects") scrollY = 5383
-        if (section === "testimonials") scrollY = 7401
+        if (section === "skills") scrollY = 2481
+        if (section === "projects") scrollY = 5293
+        if (section === "testimonials") scrollY = 7315
       }
 
       if (smallScreen) {
