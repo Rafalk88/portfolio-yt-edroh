@@ -39,7 +39,7 @@ export const Testimonials = () => {
               return (
                 <motion.div
                   key={testimonial.id}
-                  className={`${testimonial.bgColor} ${testimonialsStyles} before:content-${testimonial.content}`}
+                  className={`before:content-${testimonial.content} ${testimonial.bgColor} ${testimonialsStyles}`}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true, amount: 0.5 }}
